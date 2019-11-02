@@ -1,0 +1,41 @@
+{
+  "name": "uptask",
+  "version": "1.0.0",
+  "description": "administrator, CRM of clients",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coffescript/uptask-node.git"
+  },
+  "keywords": [
+    "CRM",
+    "uptask",
+    "node",
+    "MVC",
+    "Administrator",
+    "Admin"
+  ],
+  "author": "Deiby Mejia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coffescript/uptask-node/issues"
+  },
+  "homepage": "https://github.com/coffescript/uptask-node#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-validator": "^6.2.0",
+    "mongoose": "^5.7.7",
+    "mysql2": "^2.0.0",
+    "pug": "^2.0.4",
+    "shortid": "^2.2.15",
+    "slug": "^1.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4",
+    "sequelize": "^5.21.2"
+  }
+}

@@ -1,0 +1,10 @@
+mixin createProject(PROJECTS = {})
+
+    pre= vardump(PROJECTS)
+
+    form(action=`/project/edit/${PROJECTS.id}` method="POST" class="agregar-proyecto")
+          .campo
+              label(for="name") Name Project:
+              input( value=PROJECTS.name type="text", id="name" name="name" placeholder="Name Project")
+          .campo.enviar
+              input(type="submit" value=`${PROJECTS.name ? 'Update' : 'Add'}` class="boton")

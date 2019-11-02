@@ -1,0 +1,20 @@
+extends Layout
+
+block content
+    .contenido-principal
+        h1 #{namePage} - #{PROJECT.name}
+
+
+        //- TODO - FORM HERE
+
+        //- TODO LIST OF PENDINGS
+
+        //- ACTIONS YOU CAN REALIZE
+
+        pre= vardump(PROJECT)
+
+        .contenedor-acciones
+            a(href=`/project/edit/${PROJECT.id}` class="boton") Edit Project
+            button#eliminar-proyecto(type="button" class="boton eliminar") Delete Project
+
+
