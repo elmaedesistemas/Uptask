@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet", href="/css/normalize.css")
+        link(rel="stylesheet", href="/css/app.css")
+        title #{namePage}
+    body
+        header.barra
+            h1 Uptask - Administrator of Projects #{year}
+            a(href="#") Cerrar Sesión
+
+        main.contenedor
+            aside.contenedor-proyectos
+                .panel.crear-proyecto
+                    a(href="/new-project" class="boton") New Project
+                        span +
+                .panel.lista-proyectos
+                    h2 Projects
+                    ul#proyectos.proyectos
+                        if(allProjects.length)
+                            each project in allProjects
+                                li
+                                    a(href=`/project/${project.url}`)= project.name
+            block content
+
+            //pre= vardump(allProjects)

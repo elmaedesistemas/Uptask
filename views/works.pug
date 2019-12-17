@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    .contenido-principal
+        h1 #{namePage} - #{projectUrl.name}
+
+        pre= vardump(projectUrl.id)
+
+        .contenedor-acciones
+            a(href=`/project/edit/${projectUrl.id}` class="boton") Edit Project
+            button#eliminar-proyecto(type="button" class="boton eliminar") Delete Project
