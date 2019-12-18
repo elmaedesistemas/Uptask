@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon ./index.js"
+    "dev": "nodemon ./index.js",
+    "start": "concurrently \"npm run dev\" \"npm run watch\" ",
+    "watch": "webpack --w --mode development"
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,7 @@
   },
   "homepage": "https://github.com/coffescript/uptask-node#readme",
   "dependencies": {
+    "expo": "^36.0.1",
     "express": "^4.17.1",
     "express-validator": "^6.2.0",
     "mongoose": "^5.7.7",

@@ -20,5 +20,8 @@ module.exports = function(){
     router.get('/project/edit/:id', projectsController.formEdit)
     router.post('/new-project/:id', body('name').not().isEmpty().trim().escape(),
                 projectsController.updateProject)
+
+    //delete projects
+    router.delete('/project/:url', projectsController.deleteProject)
   return router
 }
